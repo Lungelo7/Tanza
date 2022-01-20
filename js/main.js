@@ -65,7 +65,13 @@
             }
         }
     });
+    //html hider
     
+    var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+if (a.indexOf('html') > -1) { //Check of html String in URL.
+   url = url.substring(0, newURL.lastIndexOf("."));
+}
+
     
     // Blogs carousel
     $(".blog-carousel").owlCarousel({
@@ -101,6 +107,5 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-    
 })(jQuery);
 
